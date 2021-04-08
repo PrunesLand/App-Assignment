@@ -1,13 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import AccountScreen from './Components/AccountScreen/AccountScreen';
+import InfoEditScreen from './Components/InfoEdit/InfoEditScreen';
+import InfoScreen from './Components/InformationScreen/InfoScreen';
+import LoginScreen from './Components/LoginScreen/LoginScreen';
+import RegisterScreen from './Components/RegisterScreen/RegisterScreen';
+import TravelScreen from './Components/TravelScreen/TravelScreen';
+import WelcomeScreen from './Components/WelcomeScreen/WelcomeScreen';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+   <AccountScreen/>
   );
 }
 
