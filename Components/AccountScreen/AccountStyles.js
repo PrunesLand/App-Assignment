@@ -53,4 +53,5 @@ export const account = StyleSheet.create({
         backgroundColor:'#B7E4C7'
     }
     
+    
 })
