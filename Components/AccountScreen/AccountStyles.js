@@ -7,7 +7,8 @@ export const account = StyleSheet.create({
         backgroundColor:'#2D6A4F',
         display:'flex',
         justifyContent:'center',
-        alignContent:'center'
+        alignContent:'center',
+        
     },
     headerText:{
         textAlign:'center',
@@ -23,8 +24,9 @@ export const account = StyleSheet.create({
         justifyContent:'center'
     },
     userText:{
-        fontSize:'40px',
-        color:'#2D6A4F'
+        fontSize:'30px',
+        color:'#2D6A4F',
+    
     },  
     buttonContainer:{
         height:'50vh',
@@ -32,8 +34,8 @@ export const account = StyleSheet.create({
         display:'flex',
         justifyContent:'flex-start',
         textAlign:'center',
-        alignItems:'center'
-        
+        alignItems:'center',
+       
     },
     logoffContainer:{
         height:'15vh',
@@ -41,7 +43,8 @@ export const account = StyleSheet.create({
         display:'flex',
         justifyContent:'center',
         textAlign:'center',
-        alignItems:'center'
+        alignItems:'center',
+        
         
     },
     background:{

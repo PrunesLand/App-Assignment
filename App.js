@@ -11,7 +11,7 @@ import WelcomeScreen from './Components/WelcomeScreen/WelcomeScreen';
 
 export default function App() {
   return (
-   <AccountScreen/>
+   <TravelScreen/>
   );
 }
 

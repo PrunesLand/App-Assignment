@@ -52,5 +52,49 @@ export const travel = StyleSheet.create({
         height:'10vh',
         width:'100%',
         
+    },
+    travelHeader:{
+        height:'10vh',
+        width:'100%',
+        backgroundColor:'#2D6A4F',
+        display:'flex',
+        flexDirection:'row'
+        
+    },
+    back:{
+        height:'100%',
+        width:'10vh',
+        position:'absolute',
+        display:'flex',
+        justifyContent:'center'
+    },
+    account:{
+        height:'100%',
+        width:'10vh',
+        position:'absolute',
+        left:'45px',
+        display:'flex',
+        justifyContent:'center'
+    },
+    headerTextContainer:{
+        height:'100%',
+        width:'100%',
+        textAlign:'center',
+        display:'flex',
+        justifyContent:'center'
+    },
+    headerText:{
+        color:'#fff',
+        fontSize:'40px'
+    }
+})
+
+export const filter = StyleSheet.create({
+    container:{
+        height:'10vh',
+        width:'100%',
+        backgroundColor:'#B7E4C7',
+        borderBottomWidth: '3px',
+        borderColor: '#2D6A4F'
     }
 })

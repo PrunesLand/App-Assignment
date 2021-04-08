@@ -1,8 +1,8 @@
 import React from 'react'
-import { View, Text, FlatList, ImageBackground, TouchableOpacity } from 'react-native'
+import { View, Text, FlatList, ImageBackground, TouchableOpacity, TouchableHighlight } from 'react-native'
 import { account } from '../AccountScreen/AccountStyles'
 import AppTextInput from '../TextInput/AppTextInput'
-import {travel} from './TravelStyles'
+import {travel,filter} from './TravelStyles'
 import {MaterialCommunityIcons} from '@expo/vector-icons'
 import Item from './Item'
 
@@ -27,6 +27,43 @@ const Data = [
     },
 ]
 
+const TravelHeader = () => {
+    return(
+        <View style={travel.travelHeader}>
+                
+
+                <View style={travel.back} >
+                    <MaterialCommunityIcons
+                    name='chevron-left'
+                    size={60}
+                    color='#fff'
+                    />
+                </View>
+                
+                <View style={travel.account}>
+                    <MaterialCommunityIcons
+                    name='account-circle'
+                    size={45}
+                    color='#fff'
+                    />
+                </View>
+                <View style={travel.headerTextContainer}>
+                    <Text style={travel.headerText}>Travels</Text>
+                </View>
+        
+        </View>
+    )
+}
+
+const Filter = () => {
+    return(
+        <View style={filter.container}>
+            <View>
+                
+            </View>
+        </View>
+    )
+}
 
 
 const TravelScreen = () => {
@@ -39,34 +76,18 @@ const TravelScreen = () => {
 
     return (
         <View style={account.background}>
-            <View style={account.header}></View>
-            <View style={travel.imgContainer}>
-                <ImageBackground 
-                source={require('../Images/sydney.jpg')}
-                style={travel.image}
-                 />
-                <Text style={travel.imgText}>Travel options</Text>
-            </View>
-            <View style={account.header}>
-                <Text style={travel.listHeader}>List</Text>
-            </View>
-            <View style={travel.addContainer}>
-                <AppTextInput/>
-                <TouchableOpacity style={travel.plus}>
-                    <MaterialCommunityIcons 
-                        name='plus-thick'
-                        size={45}
-                        color='#1B4332'
-                    />
-                </TouchableOpacity>
-            </View>
-            <View style={travel.listContainer}>
+            <TravelHeader/>
+            <Filter/>
+            
+            
+            
+            {/* <View style={travel.listContainer}>
                 <FlatList
                 data={Data}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
                 />
-            </View>
+            </View> */}
            
         </View>
     )

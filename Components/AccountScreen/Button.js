@@ -14,17 +14,22 @@ export default function Button({title, color}) {
 const styles = StyleSheet.create({
     container:{
         width:'309px',
-        height:'45px',
+        height:'60px',
         backgroundColor:'#2D6A4F',
         display:'flex',
         justifyContent:'center',
         alignContent:'center',
         textAlign:'center',
         borderRadius:'15px',
+        borderWidth: '5px',
+        borderColor: '#1B4332',
+       
         
     },
     text:{
         fontSize:'30px',
         color:'#fff',
+        padding: '15px'
+        
     }
 })

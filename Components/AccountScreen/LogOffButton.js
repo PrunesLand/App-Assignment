@@ -14,16 +14,19 @@ export default function LogOffButton({title}) {
 const styles = StyleSheet.create({
     container:{
         width:'310px',
-        height:'61px',
+        height:'81px',
         backgroundColor:'#2D6A4F',
         display:'flex',
         justifyContent:'center',
         alignContent:'center',
         textAlign:'center',
-        borderRadius:'15px'
+        borderRadius:'15px',
+        borderRadius:'15px',
+        borderWidth: '5px',
+        borderColor: '#1B4332',
     },
     text:{
-        fontSize:'40px',
+        fontSize:'45px',
         color:'#FF4141'
     }
 })
