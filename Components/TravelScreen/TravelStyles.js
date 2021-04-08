@@ -104,3 +104,18 @@ export const filter = StyleSheet.create({
         color:'#fff'
     }
 })
+
+export const add = StyleSheet.create({
+    container:{
+        height:'5vh',
+        width:'10vh',
+        backgroundColor:'#2D6A4F',
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        borderRadius:'15px',
+        borderWidth:'5px',
+        borderColor:'#1B4332'
+    }
+})

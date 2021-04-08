@@ -1,36 +1,48 @@
 import React from 'react'
-import { View, Text, FlatList, StyleSheet } from 'react-native'
+import { View, Text, FlatList, StyleSheet, TouchableHighlight, ImageBackground } from 'react-native'
 import { account } from '../AccountScreen/AccountStyles'
 import { info } from './InfoStyles'
+import {MaterialCommunityIcons} from '@expo/vector-icons'
 
-function TestComp(){
+const InfoHeader = () => {
     return(
-    <View>
-        <Text >
-            test
-        </Text>
-    </View>
+        <View style={account.header}>
+            <TouchableHighlight>
+            <MaterialCommunityIcons
+            name='close'
+            size={45}
+            color='#fff'
+            />
+            </TouchableHighlight>
+        </View>
     )
 }
 
-export default function InfoScreen({city}) {
+const InfoHero = () => {
+    return(
+        <View style={info.titleContainer}>
+            <ImageBackground 
+            style={{width:'100%', height:'30vh'}}
+            source={require('../Images/sydney.jpg')}/>
+            <Text style={info.titleText}>Activities in </Text>
+        </View>
+    )
+}
+
+export default function InfoScreen() {
 
     return (
         <View style={account.background, {backgroundColor: '#f5f5'}}>
-            <View style={account.header}></View>
-            <View style={info.titleContainer}>
-                <Text style={info.titleText}>Activities in {city}</Text>
-            </View>
+            <InfoHeader/>
+            <InfoHero/>
             <View>
                 <FlatList/>
-                <TestComp/>
+                
             </View>
         </View>
     )
 }
 
-const styles = StyleSheet.create({
-    
-})
+
 
 

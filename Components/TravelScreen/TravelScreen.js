@@ -2,7 +2,7 @@ import React , {useState}from 'react'
 import { View, Text, FlatList, ImageBackground, TouchableOpacity, TouchableHighlight, Modal, Button } from 'react-native'
 import { account } from '../AccountScreen/AccountStyles'
 import AppTextInput from '../TextInput/AppTextInput'
-import {travel,filter} from './TravelStyles'
+import {travel,filter, add} from './TravelStyles'
 import {MaterialCommunityIcons} from '@expo/vector-icons'
 import Item from './Item'
 
@@ -79,19 +79,51 @@ const Filter = () => {
     )
 }
 
-
-const TravelScreen = () => {
-
+const List = () => {
     const renderItem = ({item}) => (
         <View style={travel.renderItems}>
             <Item city={item.city}/>
         </View>
     )
+    return(
+        <View style={travel.listContainer}>
+                <FlatList
+                data={Data}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
+                />
+        </View>
+    )
+}
+
+const AddList = () => {
+    return(
+    <TouchableHighlight>
+        <View style={add.container}>
+            <Text style={{color:'#fff'}}>Add</Text>
+            <MaterialCommunityIcons
+                name='plus'
+                size={25}
+                color='#fff'
+                />
+        </View>
+    </TouchableHighlight>
+    )
+}
+
+
+const TravelScreen = () => {
+
+    
 
     return (
         <View style={account.background}>
             <TravelHeader/>
             <Filter/>
+            <View>
+                <List/>
+            </View>
+            <AddList/>
             
             
             
