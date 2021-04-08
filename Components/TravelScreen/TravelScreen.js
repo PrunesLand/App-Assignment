@@ -1,10 +1,11 @@
-import React from 'react'
-import { View, Text, FlatList, ImageBackground, TouchableOpacity, TouchableHighlight } from 'react-native'
+import React , {useState}from 'react'
+import { View, Text, FlatList, ImageBackground, TouchableOpacity, TouchableHighlight, Modal, Button } from 'react-native'
 import { account } from '../AccountScreen/AccountStyles'
 import AppTextInput from '../TextInput/AppTextInput'
 import {travel,filter} from './TravelStyles'
 import {MaterialCommunityIcons} from '@expo/vector-icons'
 import Item from './Item'
+
 
 const Data = [
     {
@@ -56,11 +57,24 @@ const TravelHeader = () => {
 }
 
 const Filter = () => {
+    const [modalVisible, setModalVisible] = useState(false);
     return(
         <View style={filter.container}>
-            <View>
-                
-            </View>
+            <TouchableHighlight onPress={() => setModalVisible(true)}>
+                <View >
+                    <Text>categ</Text>
+                    <MaterialCommunityIcons
+                    name='chevron-down' 
+                    size={24}
+                    />
+                </View>
+            </TouchableHighlight>
+            <Modal visible={modalVisible} animationType='slide'>
+                <View style={account.background}>
+                    <Button title='close' onPress={()=> setModalVisible(false)}/>
+                </View>
+            </Modal>
+               
         </View>
     )
 }

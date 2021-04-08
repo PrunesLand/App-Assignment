@@ -96,5 +96,11 @@ export const filter = StyleSheet.create({
         backgroundColor:'#B7E4C7',
         borderBottomWidth: '3px',
         borderColor: '#2D6A4F'
+    },
+    selector:{
+        height:'5vh',
+        width:'20vh',
+        backgroundColor:'#f5f5',
+        color:'#fff'
     }
 })
