@@ -28,11 +28,11 @@ const Data = [
     },
 ]
 
-const TravelHeader = () => {
+const TravelHeader = ({onPress}) => {
     return(
         <View style={travel.travelHeader}>
                 
-
+                
                 <View style={travel.back} >
                     <MaterialCommunityIcons
                     name='chevron-left'
@@ -79,15 +79,18 @@ const Filter = () => {
     )
 }
 
-const List = () => {
-    const renderItem = ({item}) => (
-        <View style={travel.renderItems}>
-            <Item city={item.city}/>
-        </View>
+const List = ({onPress}) => {
+    const renderItem = ({item, onPress}) => (
+        <TouchableHighlight onPress={onPress}>
+            <View style={travel.renderItems}>
+                <Item city={item.city}/>
+            </View>
+        </TouchableHighlight>
     )
     return(
         <View style={travel.listContainer}>
                 <FlatList
+                onPress={onPress}
                 data={Data}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
@@ -112,7 +115,7 @@ const AddList = () => {
 }
 
 
-const TravelScreen = () => {
+const TravelScreen = ({navigation}) => {
 
     
 
@@ -121,19 +124,9 @@ const TravelScreen = () => {
             <TravelHeader/>
             <Filter/>
             <View>
-                <List/>
+                <List onPress = {() => navigation.navigate('edit')}/>
             </View>
             <AddList/>
-            
-            
-            
-            {/* <View style={travel.listContainer}>
-                <FlatList
-                data={Data}
-                renderItem={renderItem}
-                keyExtractor={item => item.id}
-                />
-            </View> */}
            
         </View>
     )
