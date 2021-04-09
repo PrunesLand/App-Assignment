@@ -8,10 +8,14 @@ import LoginScreen from './Components/LoginScreen/LoginScreen';
 import RegisterScreen from './Components/RegisterScreen/RegisterScreen';
 import TravelScreen from './Components/TravelScreen/TravelScreen';
 import WelcomeScreen from './Components/WelcomeScreen/WelcomeScreen';
+import {NavigationContainer} from '@react-navigation/native'
+import AuthNavigator from './Components/Navigation/AuthNavigation';
 
 export default function App() {
   return (
-   <InfoScreen/>
+   <NavigationContainer>
+     <AuthNavigator/>
+   </NavigationContainer>
   );
 }
 

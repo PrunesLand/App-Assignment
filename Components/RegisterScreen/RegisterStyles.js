@@ -5,12 +5,20 @@ export const RegStyles = StyleSheet.create({
         width:'100%',
         height: '70vh',
         position: 'absolute',
-        top: '30vh',
+        top: '20vh',
         padding: '3vh'
     },
     title:{
         fontSize:'40px',
         color:'#fff'
+    },
+    close:{
+        fontSize:'80px',
+        color:'#FFF',
+        
+    },
+    closeContainer:{
+        zIndex:'10'
     }
 })
 
@@ -20,7 +28,8 @@ export const logoStyle = StyleSheet.create({
         width:'100%',
         display:'flex',
         justifyContent:'center',
-        alignItems:'center',
+        alignItems:'center',  
+        bottom:'8vh' 
         
     },
 })

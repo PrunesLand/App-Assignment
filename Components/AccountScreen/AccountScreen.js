@@ -5,7 +5,7 @@ import Button from './Button'
 import LogOffButton from './LogOffButton'
 
 
-export default function AccountScreen({username}) {
+export default function AccountScreen({username, navigation}) {
     return (
         <View style={account.background}>
             <View style={account.header}>
@@ -16,11 +16,11 @@ export default function AccountScreen({username}) {
             </View>
             {/* sydney button is stored */}
             <View style={account.buttonContainer}> 
-                <Button title='Sydney' />
+                <Button title='Sydney' onPress={() => navigation.navigate('travel')}/>
             </View>
             {/* Logout button is stored */}
             <View style={account.logoffContainer}>
-                <LogOffButton title='Log off' />
+                <LogOffButton title='Log off' onPress={() => navigation.navigate('welcome')}/>
             </View>
         </View>
     )

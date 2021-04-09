@@ -2,9 +2,9 @@ import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 import { styles } from './WelcomeStyles'
 
-const WelcomeButton = ({title}) => {
+const WelcomeButton = ({title, onPress}) => {
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onPress}>
             <View style={styles.Button}>
                 <Text style={styles.register}>
                     {title}

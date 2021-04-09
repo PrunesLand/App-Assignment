@@ -4,7 +4,7 @@ import {styles} from './WelcomeStyles'
 import {MaterialCommunityIcons} from '@expo/vector-icons'
 import WelcomeButton from './WelcomeButton'
 
-function WelcomeScreen() {
+function WelcomeScreen({navigation}) {
     return (
         <View  >
             <ImageBackground 
@@ -35,11 +35,11 @@ function WelcomeScreen() {
                     <View style={styles.square}>
                         <View>
                             <Text style={styles.textStyle}>New member? Register here:</Text>
-                            <WelcomeButton title='Register'/>
+                            <WelcomeButton title='Register' onPress={() => navigation.navigate('register')} />
                         </View>
                         <View>
                             <Text style={styles.textStyle}>Already a member? Login here:</Text>
-                            <WelcomeButton title='Login'/>
+                            <WelcomeButton title='Login' onPress={() => navigation.navigate('login')}/>
                         </View>
                     </View>
                 </View>

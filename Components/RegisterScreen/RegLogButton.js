@@ -2,9 +2,9 @@ import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
 import { regButton } from './RegisterStyles'
 
-const RegLogButton = ({title}) => {
+const RegLogButton = ({title, onPress}) => {
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onPress}>
             <View style={regButton.Button}>
                 <Text style={regButton.register}>
                     {title}
